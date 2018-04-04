@@ -1,24 +1,24 @@
-let assert = require('assert');
-let farSort = require('../index');
+/* global it, describe */
+const assert = require('assert');
+const farSort = require('../index');
 
 const letters = [
-  "Arnaldur",
-  "Ruben",
-  "Bartal",
-  "Díðrikur",
-  "Jatmundur",
-  "Arndór",
-  "Kristmundur",
-  "Lukas",
-  "Tjóðolvur",
-  "Ásgeir",
-  "Jøkil",
+  'Arnaldur',
+  'Ruben',
+  'Bartal',
+  'Díðrikur',
+  'Jatmundur',
+  'Arndór',
+  'Kristmundur',
+  'Lukas',
+  'Tjóðolvur',
+  'Ásgeir',
+  'Jøkil',
 ];
 
-describe('#indexOf()', function () {
-  it('Should return sorted list by faroese alphabet', function () {
-    let sortedList = farSort(letters);
-    console.log(sortedList);
+describe('farSort', () => {
+  it('Should return sorted list by faroese alphabet', () => {
+    const sortedList = farSort(letters);
     assert.equal('Arnaldur', sortedList[0]);
     assert.equal('Ásgeir', sortedList[2]);
     assert.equal('Tjóðolvur', sortedList[10]);
