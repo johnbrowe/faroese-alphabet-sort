@@ -4,8 +4,7 @@
   "description": "Sort array of strings by faroese alphabet",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "lint": "./node_modules/.bin/eslint index.js"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
