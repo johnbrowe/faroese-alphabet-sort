@@ -30,12 +30,27 @@ const alphabet = {
   ø: 29,
 };
 
-module.exports = function sort(array) {
-  return array.sort((a, b) => {
-    for (let i = 0; i < a.length; i += 1) {
-      if (alphabet[a.charAt(i).toLowerCase()] < alphabet[b.charAt(i).toLowerCase()]) return -1;
-      if (alphabet[a.charAt(i).toLowerCase()] > alphabet[b.charAt(i).toLowerCase()]) return 1;
-    }
-    return 0;
-  });
+module.exports = {
+  sortArrayOfStrings: function sortArrayOfStrings(array) {
+    return array.sort((a, b) => {
+      for (let i = 0; i < a.length; i += 1) {
+        if (alphabet[a.charAt(i).toLowerCase()] < alphabet[b.charAt(i).toLowerCase()]) return -1;
+        if (alphabet[a.charAt(i).toLowerCase()] > alphabet[b.charAt(i).toLowerCase()]) return 1;
+      }
+      return 0;
+    });
+  },
+  sortArrayOfObjects: function sortArrayOfObjects(array) {
+    return array.sort((a, b) => {
+      for (let i = 0; i < a.name.length; i += 1) {
+        if (alphabet[a.name.charAt(i).toLowerCase()] < alphabet[b.name.charAt(i).toLowerCase()]) {
+          return -1;
+        }
+        if (alphabet[a.name.charAt(i).toLowerCase()] > alphabet[b.name.charAt(i).toLowerCase()]) {
+          return 1;
+        }
+      }
+      return 0;
+    });
+  },
 };

@@ -1,6 +1,6 @@
 /* global it, describe */
 const assert = require('assert');
-const farSort = require('../index');
+const faroese = require('../index');
 
 const letters = [
   'Arnaldur',
@@ -16,9 +16,9 @@ const letters = [
   'Jøkil',
 ];
 
-describe('farSort', () => {
+describe('Faroese sort array of strings', () => {
   it('Should return sorted list by faroese alphabet', () => {
-    const sortedList = farSort(letters);
+    const sortedList = faroese.sortArrayOfStrings(letters);
     assert.equal('Arnaldur', sortedList[0]);
     assert.equal('Ásgeir', sortedList[2]);
     assert.equal('Tjóðolvur', sortedList[10]);
