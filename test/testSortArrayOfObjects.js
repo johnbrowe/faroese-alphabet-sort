@@ -2,7 +2,7 @@
 const assert = require('assert');
 const faroese = require('../index');
 
-const letters = [
+const names = [
   { name: 'Arnaldur' },
   { name: 'Ruben' },
   { name: 'Bartal' },
@@ -18,7 +18,7 @@ const letters = [
 
 describe('Faroese sort array of objects', () => {
   it('Should return sorted list by faroese alphabet', () => {
-    const sortedList = faroese.sortArrayOfObjects(letters);
+    const sortedList = faroese.sortArrayOfObjects(names, 'name');
     assert.equal('Arnaldur', sortedList[0].name);
     assert.equal('Ásgeir', sortedList[2].name);
     assert.equal('Tjóðolvur', sortedList[10].name);

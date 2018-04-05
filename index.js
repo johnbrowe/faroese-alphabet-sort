@@ -40,13 +40,13 @@ module.exports = {
       return 0;
     });
   },
-  sortArrayOfObjects: function sortArrayOfObjects(array) {
+  sortArrayOfObjects: function sortArrayOfObjects(array, key) {
     return array.sort((a, b) => {
-      for (let i = 0; i < a.name.length; i += 1) {
-        if (alphabet[a.name.charAt(i).toLowerCase()] < alphabet[b.name.charAt(i).toLowerCase()]) {
+      for (let i = 0; i < a[key].length; i += 1) {
+        if (alphabet[a[key].charAt(i).toLowerCase()] < alphabet[b[key].charAt(i).toLowerCase()]) {
           return -1;
         }
-        if (alphabet[a.name.charAt(i).toLowerCase()] > alphabet[b.name.charAt(i).toLowerCase()]) {
+        if (alphabet[a[key].charAt(i).toLowerCase()] > alphabet[b[key].charAt(i).toLowerCase()]) {
           return 1;
         }
       }
