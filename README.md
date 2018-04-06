@@ -24,9 +24,9 @@ Then, require the package and use it like so:
     
     const names = [
       { name: 'Bartal' },
-      { name: 'Díðrikur }',
+      { name: 'Díðrikur' },
       { name: 'Ásgeir' },
-      { name: 'Arnaldur }',
+      { name: 'Arnaldur' },
     ];
 
     console.log(faroese.sortArrayOfObjects(names, "name")); 
