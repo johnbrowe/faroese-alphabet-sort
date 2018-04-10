@@ -1,6 +1,6 @@
 /* global it, describe */
 const assert = require('assert');
-const faroese = require('../index');
+const faroese = require('../dist/index');
 
 const names = [
   'Arnaldur',

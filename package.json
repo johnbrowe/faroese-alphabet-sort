@@ -1,11 +1,12 @@
 {
   "name": "faroese-alphabet-sort",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Sort array of strings by faroese alphabet",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
-  },
+    "test": "./node_modules/mocha/bin/mocha",
+    "build": "./node_modules/.bin/babel src -d dist"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnbrowe/faroese-alphabet-sort.git"
@@ -26,6 +27,7 @@
     "mocha": "^5.0.5"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.10.0",
