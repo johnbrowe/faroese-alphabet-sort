@@ -1,6 +1,6 @@
 {
   "name": "faroese-alphabet-sort",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Sort array of strings by faroese alphabet",
   "main": "dist/index.js",
   "scripts": {
