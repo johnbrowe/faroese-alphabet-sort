@@ -1,4 +1,6 @@
-const alphabet = {
+"use strict";
+
+var alphabet = {
   a: 1,
   á: 2,
   b: 3,
@@ -32,8 +34,8 @@ const alphabet = {
 
 module.exports = {
   sortArrayOfStrings: function sortArrayOfStrings(array) {
-    return array.sort((a, b) => {
-      for (let i = 0; i < a.length; i += 1) {
+    return array.sort(function (a, b) {
+      for (var i = 0; i < a.length; i += 1) {
         if (alphabet[a.charAt(i).toLowerCase()] < alphabet[b.charAt(i).toLowerCase()]) return -1;
         if (alphabet[a.charAt(i).toLowerCase()] > alphabet[b.charAt(i).toLowerCase()]) return 1;
       }
@@ -41,8 +43,8 @@ module.exports = {
     });
   },
   sortArrayOfObjects: function sortArrayOfObjects(array, key) {
-    return array.sort((a, b) => {
-      for (let i = 0; i < a[key].length; i += 1) {
+    return array.sort(function (a, b) {
+      for (var i = 0; i < a[key].length; i += 1) {
         if (alphabet[a[key].charAt(i).toLowerCase()] < alphabet[b[key].charAt(i).toLowerCase()]) {
           return -1;
         }
